@@ -1,0 +1,116 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[
+    backend=biber,
+    style=numeric,
+]{biblatex}
+\usepackage{url}
+
+\addbibresource{bibfile.bib}
+
+\title{HCS502: Assessment - AI/ML Project - 2310190}
+\author{Thomas Morton}
+\date{June 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This study aims to explore and employ machine learning techniques in order to predict the cost of insurance premiums for an individual based on details about the driver as well as information about the vehicle. The research will also outline how each of these features affects the insurance premium for a driver. The data set being used has 1000 records containing the aforementioned data. This dataset will be used to train and analyse both simple and multivariate regression models, as well as clustering algorithms. Data preprocessing was carried out on the data, which consisted of normalisation in the form of scaling and anomaly identification.
+
+\end{abstract}
+
+\newpage
+
+\section{Introduction}
+
+
+\newpage
+\section{Dataset and Pre-processing}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{boxplot.png}
+\caption{Boxplot of Normalised Variables}
+\label{fig:boxplot}
+\end{figure}
+
+\newpage
+\section{Exploratory Data Analysis (EDA)}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{heatmap.png}
+\caption{Correlation Heatmap of All Features}
+\label{fig:heatmap}
+\end{figure}
+
+\newpage
+\section{Modelling and Evaluation}
+
+Linear regression models aim to establish a linear relationship between input features $x_i$ and the continuous target variable $y$ (insurance premium), typically expressed as:
+
+$$
+\hat{y} = \beta_0 + \sum_{i=1}^p \beta_i x_i
+$$
+
+where $\beta_0$ is the intercept and $\beta_i$ are the coefficients learned from data \cite{hastie_09_elements-of.statistical-learning}.
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{age_insurance_LR.png}
+\caption{Regression Line: Driver Age vs Insurance Premium}
+\label{fig:regression_age}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{actual_vs_predicted.png}
+\caption{Actual vs Predicted Premiums (Multivariate Model)}
+\label{fig:multivariate_regression}
+\end{figure}
+
+\subsection{Model Comparison}
+
+\begin{itemize}
+\item Simple linear regression provides interpretability but lower accuracy.
+\item Multivariate regression achieves high performance on synthetic data but raises questions about generalizability.
+\item Further work may include Ridge/Lasso regression to assess generalisation.
+\end{itemize}
+
+\newpage
+\section{Software Environment}
+
+
+\section{Software Environment}
+
+The machine learning pipeline was implemented in Python 3.13.2 using popular scientific libraries including \texttt{pandas} for data manipulation, \texttt{scikit-learn} for modeling, and \texttt{matplotlib} and \texttt{seaborn} for visualization.
+
+
+
+\newpage
+\section{Results Analysis}
+
+\newpage
+\section{Ethical Considerations}
+
+The use of machine learning for predicting car insurance premiums introduces several ethical concerns:
+
+\textbf{Fairness and Bias:} 
+
+\textbf{Data Privacy:} 
+
+\textbf{Transparency:} 
+
+\textbf{Accountability:} 
+
+\newpage
+\section{Conclusion}
+
+\newpage
+\printbibliography
+
+\end{document}
