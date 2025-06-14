@@ -8,7 +8,7 @@
 
 \addbibresource{bibfile.bib}
 
-\title{HCS502: Assessment - AI/ML Project - 2310190}
+\title{HCS502: Assessment \- AI/ML Project \- 2310190}
 \author{Thomas Morton}
 \date{June 2025}
 
@@ -26,7 +26,7 @@ This study aims to explore and employ machine learning techniques in order to pr
 \section{Introduction}
 Car insurance and its workings are a mystery to many. It traditionally relies on analysis and experts in the domain of car insurance to make assumption and asses the risk of certain drivers and vehicles and set a driver's insurance premium based on this knowledge and experience. In the modern world, with comparison sites and insurers in the 100's or even 1000's, artificial intelligence (AI), along with machine learning (ML), probably already run the business side of most insurers on the market. Although it may seem unfair to let these algorithms control the prices, they use data-driven methods which is trained on raw facts from the world of motoring. This technology offers an automated solution, saving the companies a lot of money in training individual staff members on the risk factors to look out for in a person. 
 
-This project investigates how effective a simple regression algorithm, using one factor, or a multivariate algorithm, using multiple factors, can be used to predict car insurance premiums based on the information provided. Linear regression is known for its interpretability and efficiency in a computational sense \cite{scikit_LR}, which allows for easy identification of trends and displaying the correlation between key factors. In applying these models to a structured dataset, this study aims to explore how effectively insurance premiums can be predicted, which will allow the assessment of the model accuracy and evaluate how this can also present the risk of over-fitting to the data.
+This project investigates how effective a simple regression algorithm, using one factor, or a multivariate algorithm, using multiple factors, can be used to predict car insurance premiums based on the information provided. Linear regression is known for its interpretability and efficiency in a computational sense\cite{scikit_LR}, which allows for easy identification of trends and displaying the correlation between key factors. In applying these models to a structured dataset, this study aims to explore how effectively insurance premiums can be predicted, which will allow the assessment of the model accuracy and evaluate how this can also present the risk of over-fitting to the data.
 
 Understanding the relationship between these factors is imperative to the research into the workings of insurance company pricing structures. This research seeks to provide more transparent pricing and show the factors that have the biggest impact on an insurance policy.
 
@@ -39,9 +39,9 @@ Understanding the relationship between these factors is imperative to the resear
 \caption{Boxplot of Normalised Variables}\label{fig:boxplot}
 \end{figure}
 
-The dataset was sources from Kaggle.com and provides an array of information including the details about a driver, their vehicle and the insurance premium they were quoted because of this \cite{Sriram_2025}. The dataset consists of 1000 rows of data containing numerical features along with the insurance price. Thee features include; Driver Age, Driver Experience, Previous Accidents, Annual Mileage (KM), Car Manufacturing Year, Car Age and finally, the taget variable, Insurance Premium in US dollars.  
+The dataset was sources from Kaggle.com and provides an array of information including the details about a driver, their vehicle and the insurance premium they were quoted because of this\cite{Sriram_2025}. The dataset consists of 1000 rows of data containing numerical features along with the insurance price. Thee features include; Driver Age, Driver Experience, Previous Accidents, Annual Mileage (KM), Car Manufacturing Year, Car Age and finally, the taget variable, Insurance Premium in US dollars.  
 
-To ensure the data was of a high enough quality, there was some initial exploratory analysis that took place in the form of normalisation, box plots and statistical summary. The inital check was to make sure where were no null values in the data, of which there are none as shown below in the output of an 'isnull().sum()' check.
+To ensure the data was of a high enough quality, there was some initial exploratory analysis that took place in the form of normalisation, box plots and statistical summary. The inital check was to make sure where were no null values in the data, of which there are none as shown below in the output of an `isnull().sum()' check.
 
 \begin{verbatim}
 Driver Age                   0
@@ -53,6 +53,8 @@ Car Age                      0
 Insurance Premium ($)        0
 dtype: int64
 \end{verbatim}
+
+
 
 
 
