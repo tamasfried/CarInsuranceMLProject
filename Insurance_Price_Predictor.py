@@ -10,13 +10,65 @@ import seaborn as sns
 def prompt_user_for_features():
     # Function to collect driver and vehicle information from user input
     print("\nEnter driver and car information:")
-    driver_age = float(input("Driver Age: "))
-    driver_experience = float(input("Driver Experience (years): "))
-    previous_accidents = float(input("Previous Accidents: "))
 
-    # Convert annual mileage from kilometres to thousands of kilometres to match dataset format
-    annual_mileage = float(input("Annual Mileage (km): ")) / 1000
-    car_manufacturing_year = float(input("Car Manufacturing Year: "))
+    # Driver Age with validation (min driving age 17, max 100)
+    while True:
+        try:
+            driver_age = float(input("Driver Age: "))
+            if driver_age < 17 or driver_age > 100:
+                print("Driver age must be between 17 and 100.")
+            else:
+                break
+        except ValueError:
+            print("Please enter a valid number for driver age.")
+
+    # Driver Experience with validation (cannot be negative based on minimum driving age of 17)
+    while True:
+        try:
+            driver_experience = float(input("Driver Experience (years): "))
+            if driver_experience < 0:
+                print("Experience cannot be negative.")
+            elif driver_age - driver_experience < 17:
+                print("Experience is invalid (minimum driving age is 17).")
+            else:
+                break
+        except ValueError:
+            print("Please enter a valid number for driver experience.")
+
+    # Previous Accidents
+    while True:
+        try:
+            previous_accidents = float(input("Previous Accidents: "))
+            if previous_accidents < 0:
+                print("Number of previous accidents cannot be negative.")
+            else:
+                break
+        except ValueError:
+            print("Please enter a valid number for previous accidents.")
+
+    # Annual Mileage
+    while True:
+        try:
+            annual_mileage = float(input("Annual Mileage (km): "))
+            if annual_mileage < 0:
+                print("Annual mileage cannot be negative.")
+            else:
+                annual_mileage /= 1000  # Convert to thousands of km
+                break
+        except ValueError:
+            print("Please enter a valid number for annual mileage.")
+
+    # Car Manufacturing Year
+    current_year = pd.Timestamp.now().year
+    while True:
+        try:
+            car_manufacturing_year = float(input("Car Manufacturing Year: "))
+            if car_manufacturing_year < 1900 or car_manufacturing_year > current_year:
+                print(f"Car manufacturing year must be between 1900 and {current_year}.")
+            else:
+                break
+        except ValueError:
+            print("Please enter a valid year for car manufacturing.")
 
     # Calculate car age automatically using current year
     current_year = pd.Timestamp.now().year
