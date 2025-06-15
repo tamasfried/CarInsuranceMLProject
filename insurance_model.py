@@ -1,4 +1,4 @@
-# Import required libraries for data manipulation, machine learning and visualisation
+# Imports
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -105,7 +105,7 @@ if __name__ == "__main__":
             # Collect user input for prediction
             user_features = prompt_user_for_features()
 
-            # Create DataFrame with proper feature names matching training data
+            # Create df with proper feature names matching training data
             user_df = pd.DataFrame(user_features, columns=['Driver Age', 'Driver Experience', 'Previous Accidents', 
                                                          'Annual Mileage (x1000 km)', 'Car Manufacturing Year', 'Car Age'])
             
