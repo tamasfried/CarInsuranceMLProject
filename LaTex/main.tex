@@ -92,30 +92,57 @@ where $\beta_0$ is the intercept and $\beta_i$ are the coefficients learned from
 \includegraphics[width=0.8\textwidth]{age_insurance_LR.png}
 \caption{Regression Line: Driver Age vs Insurance Premium}\label{fig:regression_age}
 \end{figure}
-In the above figure \ref{fig:regression_age}, the relationship between driver age and insurance premium is shown. Although the data is not prefectly linear, it does show a trend that as the driver age increases, the insurance premium decreases.This aligns with the negative correlation seen in the heatmap. 
-
+In the above figure \ref{fig:regression_age}, the relationship between driver age and insurance premium is shown. Although the data is not perfectly linear, it does show a trend that as the driver age increases, the insurance premium decreases.This aligns with the negative correlation seen in the heatmap. The R2 score for this model was 57.19\% which indicates that 57\% of of the price variance in insurance premiums can be explained by the age of the driver. This is a fairly low score for a linear regressions model, however this is to be expected as it is commonly known that there are many factors that can affect the price of car insurance premiums.
+\subsection{Multivariate Regression}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{actual_vs_predicted.png}
 \caption{Actual vs Predicted Premiums (Multivariate Model)}\label{fig:multivariate_regression}
 \end{figure}
 
+Multivariate regression is just like the simple linear regression, however, it uses multiple features to predict the target variable. In this model, it was trained on all of the features in the dataset, minus 'Vehicle Manufacturing Year' as this was not required due to the fact that 'Vehicle Age' in years was already included. The X values used included: 'Driver Age', 'Driver Experience', 'Previous Accidents', 'Annual Mileage (x1000 km)', and 'Car Age'. The model was once again trained using the \texttt{scikit-learn} model\cite{scikit_LR}. In the above figure \ref{fig:multivariate_regression}, the actual insurance prices are plotted against the predicted insurance prices. The model unusually predicts the prices perfectly, with an R squared score of 1.0, meaning that the model was 100\% correct in all of it's predictions. This indicated that the dataset being used may have been artificially generated using a similar model, or that the dataset is just too small to be able to generalise. Either way, the perfect score of this model makes it an obvious choice for the model to use for the application.
+
+\newpage
+
+\subsection{K-Nearest Neighbors Regression}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{knn_regression.png}
+\caption{K-Nearest Neighbors Regression Results}\label{fig:knn_regression}
+\end{figure}
+
+K-Nearest neighbors (KNN) is a model that predicts the target variable based on the average of it's "Nearest Neighbors", hence the name. This model is useful for clustering data into groups, however it is not as useful for predicting a continuous value such as insurance premiums. However, it is still worth testing to see how it may perform against the other models. The model show in figure \ref{fig:knn_regression} shows that the model has a Mean Squared Error (MSE) of 1.35, which is a fairly low score in terms of MSE. This, along with the R squared score of 0.96 does still indicate that the model is fairly accurate, however it is not as accurate as the perfect multivariate regression model.
+
 \subsection{Model Comparison}
 
 \begin{itemize}
-\item Simple linear regression provides interpretability but lower accuracy.
-\item Multivariate regression achieves high performance on synthetic data but raises questions about generalisability.
-\item Further work may include Ridge/Lasso regression to assess generalisation.
+\item Simple linear regression provides interpretability for individual feature but lower accuracy.
+\item Multivariate regression achieves very high performance on synthetic data but raises questions about generalisability if presented with another less synthetic dataset.
+\item K-Nearest Neighbors regression offers a balance between interpretability and accuracy, however it may struggle with larger datasets and continuous target variables.
 \end{itemize}
 
 \newpage
-\section{Software Environment}
+\section{Software Environment \& Application}
 
+\begin{figure}[h]
+\centering
+    \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=0.8\textwidth]{negative_price.png}
+        \caption{Negative Annual Mileage Effect on Insurance Premium}\label{fig:negative_mileage}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=0.8\textwidth]{base_price.png}
+        \caption{Base Price of Insurance Premium}\label{fig:base_price}
+    \end{minipage}
+\end{figure}
 
-\section{Software Environment}
+The machine learning pipeline was implemented in Python 3.13.2 and Anaconda using very common python libraries including \texttt{pandas} for data manipulation in the way of creating dataframes and analysing the data, \texttt{scikit-learn} for modeling the data, and \texttt{matplotlib} and \texttt{seaborn} for visualizations such as graphs and charts.
 
-The machine learning pipeline was implemented in Python 3.13.2 using popular scientific libraries including \texttt{pandas} for data manipulation, \texttt{scikit-learn} for modeling, and \texttt{matplotlib} and \texttt{seaborn} for visualization.
+The application created is an insurance price predictor that allows a user to input their details and retrieve a predicted insurance premium based on the data provided which matches the features in the dataset. Once the user has entered their details into the application, it will use the multivariate regression model that was chosen previously, to predict the insurance prices. The application will then produce a result that displays the predicted premium, but also the factors that were used to produce this result. I will display how much each facture contributed to the final price by using the coefficients from the multivariate regression model. 
 
+The application also uses the y-intercept of the model to provide a base price of the insurance premiums of \$500. This seems to be common practice in the insurance industry to have a base price for insurance premiums. This base price was testing by entering all user details as 0 (setting car year to 2025) and the model returned a price of \$500. As a result of this, validation checks were implemented to ensure that the user does not enter any values that would not make sense in the context of purchasing insurance. For example, a driver cannot be younger that 17 years old, and the experience cannot be more than the driver age minus 17, this is because it was based on the minimum driving age in the UK, which is 17 years old. The application also checks that the annual mileage and the car age is not negative, otherwise this has a drastic effect on the insurance premiums, which can be see on the figures \ref{fig:negative_mileage} \ref{fig:base_price}.
 
 
 \newpage

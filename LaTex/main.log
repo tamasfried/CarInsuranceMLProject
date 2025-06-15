@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.23)  15 JUN 2025 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.23)  15 JUN 2025 19:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -387,40 +387,56 @@ File: age_insurance_LR.png Graphic file (type png)
 <use age_insurance_LR.png>
 Package pdftex.def Info: age_insurance_LR.png  used on input line 92.
 (pdftex.def)             Requested size: 276.00105pt x 197.75449pt.
-<actual_vs_predicted.png, id=31, 722.7pt x 433.62pt>
-File: actual_vs_predicted.png Graphic file (type png)
-<use actual_vs_predicted.png>
-Package pdftex.def Info: actual_vs_predicted.png  used on input line 99.
-(pdftex.def)             Requested size: 276.00105pt x 165.59775pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 
 [6 <./age_insurance_LR.png>]
+<actual_vs_predicted.png, id=39, 714.7503pt x 426.393pt>
+File: actual_vs_predicted.png Graphic file (type png)
+<use actual_vs_predicted.png>
+Package pdftex.def Info: actual_vs_predicted.png  used on input line 99.
+(pdftex.def)             Requested size: 276.00105pt x 164.65303pt.
 
-[7{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./actual_vs_predicted.png>]
 
-[8]
+[7 <./actual_vs_predicted.png>]
+<knn_regression.png, id=45, 570.933pt x 426.393pt>
+File: knn_regression.png Graphic file (type png)
+<use knn_regression.png>
+Package pdftex.def Info: knn_regression.png  used on input line 111.
+(pdftex.def)             Requested size: 276.00105pt x 206.1302pt.
 
-[9]
+
+[8{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./knn_regression.png>]
+<negative_price.png, id=51, 374.39874pt x 350.30875pt>
+File: negative_price.png Graphic file (type png)
+<use negative_price.png>
+Package pdftex.def Info: negative_price.png  used on input line 131.
+(pdftex.def)             Requested size: 124.19963pt x 116.20625pt.
+<base_price.png, id=52, 360.34625pt x 231.86626pt>
+File: base_price.png Graphic file (type png)
+<use base_price.png>
+Package pdftex.def Info: base_price.png  used on input line 136.
+(pdftex.def)             Requested size: 124.19963pt x 79.91609pt.
+
+
+[9 <./negative_price.png> <./base_price.png>]
 
 [10]
 
 [11]
-Overfull \hbox (2.09814pt too wide) in paragraph at lines 143--143
+
+[12]
+Overfull \hbox (2.09814pt too wide) in paragraph at lines 170--170
 []\OT1/cmr/m/it/10 Scikit learn: Lin-ear Re-gres-sion\OT1/cmr/m/n/10 . \OT1/cmr/m/sc/10 url\OT1/cmr/m/n/10 : $\OT1/cmtt/m/n/10 https : / / scikit -[] learn . org / stable /
  []
 
 
-Overfull \hbox (7.3027pt too wide) in paragraph at lines 143--143
+Overfull \hbox (7.3027pt too wide) in paragraph at lines 170--170
 \OT1/cmtt/m/n/10 https : / / www . kaggle . com / datasets / govindaramsriram / car -[] insurance -[]
  []
 
 
 
-[12] (./main.aux)
+[13] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -430,18 +446,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9626 strings out of 473190
- 185874 string characters out of 5715800
- 1002408 words of memory out of 5000000
- 32821 multiletter control sequences out of 15000+600000
+ 9652 strings out of 473190
+ 186486 string characters out of 5715800
+ 1003474 words of memory out of 5000000
+ 32847 multiletter control sequences out of 15000+600000
  564849 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,6n,81p,988b,1274s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 66i,8n,81p,1309b,1274s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (12 pages, 345731 bytes).
+Output written on main.pdf (13 pages, 436772 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

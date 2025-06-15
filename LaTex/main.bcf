@@ -2376,6 +2376,7 @@
     <bcf:citekey order="2" intorder="1">Sriram_2025</bcf:citekey>
     <bcf:citekey order="3" intorder="1">scikit_scaler</bcf:citekey>
     <bcf:citekey order="4" intorder="1">hastie_09_elements-of.statistical-learning</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">scikit_LR</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
