@@ -39,9 +39,9 @@ Understanding the relationship between these factors is imperative to the resear
 \caption{Boxplot of Normalised Variables}\label{fig:boxplot}
 \end{figure}
 
-The dataset was sources from Kaggle.com and provides an array of information including the details about a driver, their vehicle and the insurance premium they were quoted because of this\cite{Sriram_2025}. The dataset consists of 1000 rows of data containing numerical features along with the insurance price. Thee features include; Driver Age, Driver Experience, Previous Accidents, Annual Mileage (KM), Car Manufacturing Year, Car Age and finally, the taget variable, Insurance Premium in US dollars.  
+The dataset was sources from Kaggle.com and provides an array of information including the details about a driver, their vehicle and the insurance premium they were quoted because of this\cite{Sriram_2025}. The dataset consists of 1000 rows of data containing numerical features along with the insurance price. Thee features include; Driver Age, Driver Experience, Previous Accidents, Annual Mileage (KM), Car Manufacturing Year, Car Age and finally, the target variable, Insurance Premium in US dollars.  
 
-To ensure the data was of a high enough quality, there was some initial exploratory analysis that took place in the form of normalisation, box plots and statistical summary. The inital check was to make sure where were no null values in the data, of which there are none as shown below in the output of an `isnull().sum()' check. SKlearn's standard scaler \cite{scikit_scaler} was used to normalise the data for the boxplots which makes it a lot easier to plot and pick out any outliers, of which there are none in this instance. Due to the nature of our data, all of the variables are integers or floats, this was confirmed by using 'df.dtypes' against the imported dataframe.
+To ensure the data was of a high enough quality, there was some initial exploratory analysis that took place in the form of normalisation, box plots and statistical summary. The initial check was to make sure where were no null values in the data, of which there are none as shown below in the output of an `isnull().sum()' check. SKlearn's standard scaler \cite{scikit_scaler} was used to normalise the data for the boxplots which makes it a lot easier to plot and pick out any outliers, of which there are none in this instance. Due to the nature of our data, all of the variables are integers or floats, this was confirmed by using 'df.dtypes' against the imported dataframe.
 
 \begin{verbatim}
 Driver Age                   0
@@ -67,15 +67,16 @@ dtype: int64
 \caption{Correlation Heatmap of All Features}\label{fig:heatmap}
 \end{figure}
 
-Using seaborn makes it simple to view a heatmap of the correlation between all of the variables. This is shown in the above figure comparing the relationip of any of the features against any other feature. In this heatmap it points out the strong negative correlations between 'Driver Age' and 'Driver Experience', these show a negative corealtion of -0.78 and -0.80 respectively. This suggests that older and more expericenced drivers are considered safer drivers which in turn allows them to have a lower insurance premium. This alligns with general risk assesment principles that expericenced drivers tend to be safer and older drivers often more sensible on the road. 
+Using seaborn makes it simple to view a heatmap of the correlation between all of the variables. This is shown in figure \ref{fig:heatmap} comparing the relationip of any of the features against any other feature. In this heatmap it points out the strong negative correlations between 'Driver Age' and 'Driver Experience', these show a negative corealtion of -0.78 and -0.80 respectively. This suggests that older and more expericenced drivers are considered safer drivers which in turn allows them to have a lower insurance premium. This alligns with general risk assesment principles that expericenced drivers tend to be safer and older drivers often more sensible on the road. 
 
 As expected, previous accidents seems to have a fairly strong positive correlation against insurance premiums. This implies that the more accidents that a driver has, the more at risk they are on the road. This again aligns with general risk assessment principles that drivers that have accidents more often, are more likely to have another accident in future. Other features in our dataset showed weaker and more negligable correlations, meaning that the correlation is not as strong and these have less of an effect on the price of car insurance. It would be interesting to see if other factors were added to this dataset, how much effect they would have. Such as engine size (cc), engine power (bhp), driveterrain layout (AWD, FWD, RWD), however those are not available for this dataset.
 
 \newpage
 \section{Modelling and Evaluation}
 
-Choosing a model to use for the application requires some testing of various models and evaluating the results. Some obvious choices are simple linear regression and multivariate regression. K-means and K-nearest neighbor are also useful for seperating data into different groups, however for predicting a continuous value such as insurance premiums, linear regression is the more appropirate. Dispite this, this section will cover all aforementioned to ensure no opportunities for appropirate models are missed.
+Choosing a model to use for the application requires some testing of various models and evaluating the results. Some obvious choices are simple linear regression and multivariate regression. K-nearest neighbor regression is also useful for seperating data into different groups, however for predicting a continuous value such as insurance premiums, linear regression is the more appropirate. Dispite this, this section will cover all aforementioned to ensure no opportunities for appropirate models are missed.
 
+\subsection{Simple Linear Regression}
 Linear regression models aim to establish a linear relationship between input features $x_i$ and the continuous target variable $y$ (insurance premium), typically expressed as:
 
 $$
@@ -91,6 +92,7 @@ where $\beta_0$ is the intercept and $\beta_i$ are the coefficients learned from
 \includegraphics[width=0.8\textwidth]{age_insurance_LR.png}
 \caption{Regression Line: Driver Age vs Insurance Premium}\label{fig:regression_age}
 \end{figure}
+In the above figure \ref{fig:regression_age}, the relationship between driver age and insurance premium is shown. Although the data is not prefectly linear, it does show a trend that as the driver age increases, the insurance premium decreases.This aligns with the negative correlation seen in the heatmap. 
 
 \begin{figure}[h]
 \centering
@@ -102,7 +104,7 @@ where $\beta_0$ is the intercept and $\beta_i$ are the coefficients learned from
 
 \begin{itemize}
 \item Simple linear regression provides interpretability but lower accuracy.
-\item Multivariate regression achieves high performance on synthetic data but raises questions about generalizability.
+\item Multivariate regression achieves high performance on synthetic data but raises questions about generalisability.
 \item Further work may include Ridge/Lasso regression to assess generalisation.
 \end{itemize}
 

@@ -23,7 +23,7 @@ def prompt_user_for_features():
     car_age = current_year - car_manufacturing_year
 
     # Return features as a nested list for DataFrame creation
-    return [[driver_age, driver_experience, previous_accidents, annual_mileage, car_manufacturing_year, car_age]]
+    return [[driver_age, driver_experience, previous_accidents, annual_mileage, car_age]]
 
 if __name__ == "__main__":
     while True:
@@ -44,7 +44,7 @@ if __name__ == "__main__":
         df = pd.read_csv('car_insurance.csv')
 
         # Separate features (X) and target variable (y)
-        X = df.drop('Insurance Premium ($)', axis=1)
+        X = df.drop(['Insurance Premium ($)', 'Car Manufacturing Year'], axis=1) # Drop Insurance Premium and Car Manufacturing Year for training as car age is already defined.
         y = df['Insurance Premium ($)']
 
         # Split data into training and testing sets with 80-20 ratio
@@ -107,7 +107,7 @@ if __name__ == "__main__":
 
             # Create df with proper feature names matching training data
             user_df = pd.DataFrame(user_features, columns=['Driver Age', 'Driver Experience', 'Previous Accidents', 
-                                                         'Annual Mileage (x1000 km)', 'Car Manufacturing Year', 'Car Age'])
+                                                         'Annual Mileage (x1000 km)', 'Car Age'])
             
             # Generate prediction using trained model
             predicted_premium = model.predict(user_df)[0]

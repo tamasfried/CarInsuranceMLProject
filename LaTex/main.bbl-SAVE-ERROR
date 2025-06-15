@@ -1,0 +1,129 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{hastie_09_elements-of.statistical-learning}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=971cf69058b64a94326dea0f2a8bbcce}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{7ca1bfe876d5e037b6aed69704221267}
+      \strng{fullhash}{7ca1bfe876d5e037b6aed69704221267}
+      \strng{fullhashraw}{7ca1bfe876d5e037b6aed69704221267}
+      \strng{bibnamehash}{7ca1bfe876d5e037b6aed69704221267}
+      \strng{authorbibnamehash}{7ca1bfe876d5e037b6aed69704221267}
+      \strng{authornamehash}{7ca1bfe876d5e037b6aed69704221267}
+      \strng{authorfullhash}{7ca1bfe876d5e037b6aed69704221267}
+      \strng{authorfullhashraw}{7ca1bfe876d5e037b6aed69704221267}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{The elements of statistical learning: data mining, inference and prediction}
+      \field{year}{2009}
+      \verb{file}
+      \verb :Books\\HastieTibshiraniFriedman-09-Elements-of-Statistical-Learning-2nd-edition\\hastie_09_elements-of.statistical-learning.pdf:PDF
+      \endverb
+      \verb{urlraw}
+      \verb http://www-stat.stanford.edu/~tibs/ElemStatLearn/
+      \endverb
+      \verb{url}
+      \verb http://www-stat.stanford.edu/~tibs/ElemStatLearn/
+      \endverb
+      \keyw{inference mathmatics dataanalysis method clutering statistics}
+    \endentry
+    \entry{scikit_LR}{misc}{}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{scikit}
+      \field{title}{Scikit learn: Linear Regression}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression
+      \endverb
+    \endentry
+    \entry{scikit_scaler}{misc}{}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{scikit}
+      \field{title}{Scikit learn: Standard Scaler}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler
+      \endverb
+    \endentry
+    \entry{Sriram_2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=71549835b438cdc98be53ba4eacef663}{%
+           family={Sriram},
+           familyi={S\bibinitperiod},
+           given={Govindaram},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{71549835b438cdc98be53ba4eacef663}
+      \strng{fullhash}{71549835b438cdc98be53ba4eacef663}
+      \strng{fullhashraw}{71549835b438cdc98be53ba4eacef663}
+      \strng{bibnamehash}{71549835b438cdc98be53ba4eacef663}
+      \strng{authorbibnamehash}{71549835b438cdc98be53ba4eacef663}
+      \strng{authornamehash}{71549835b438cdc98be53ba4eacef663}
+      \strng{authorfullhash}{71549835b438cdc98be53ba4eacef663}
+      \strng{authorfullhashraw}{71549835b438cdc98be53ba4eacef663}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Kaggle}
+      \field{month}{01}
+      \field{title}{Car Insurance Premium Dataset}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/datasets/govindaramsriram/car-insurance-premium-dataset
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/datasets/govindaramsriram/car-insurance-premium-dataset
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
