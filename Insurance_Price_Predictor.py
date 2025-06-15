@@ -82,7 +82,7 @@ if __name__ == "__main__":
 
         # Display main menu options
         print("\nMain Menu:")
-        print("1. Analyse dataset and visualise results")
+        print("1. Analyse dataset")
         print("2. Predict insurance premium for a new driver/car")
         print("3. Exit")
         mode = input("Enter 1, 2, or 3: ").strip()
@@ -124,34 +124,6 @@ if __name__ == "__main__":
             for feature, coef in zip(X.columns, model.coef_):
                 print(f"{feature}: {coef:.4f}")
             
-            # Create and save correlation matrix visualisation
-            plt.figure(figsize=(10, 8))
-            correlation_matrix = df.corr()
-            sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0)
-            plt.title('Correlation Matrix of Features')
-            plt.tight_layout()
-            plt.savefig('correlation_matrix.png')
-            
-            # Create and save actual vs predicted values plot
-            plt.figure(figsize=(10, 6))
-            plt.scatter(y_test, y_pred, alpha=0.5)
-            plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--', lw=2)
-            plt.xlabel('Actual Premium')
-            plt.ylabel('Predicted Premium')
-            plt.title('Actual vs Predicted Insurance Premiums')
-            plt.tight_layout()
-            plt.savefig('actual_vs_predicted.png')
-            
-            # Create and save residual plot to check model assumptions
-            residuals = y_test - y_pred
-            plt.figure(figsize=(10, 6))
-            plt.scatter(y_pred, residuals, alpha=0.5)
-            plt.axhline(y=0, color='r', linestyle='--')
-            plt.xlabel('Predicted Premium')
-            plt.ylabel('Residuals')
-            plt.title('Residual Plot')
-            plt.tight_layout()
-            plt.savefig('residual_plot.png')
             
         elif mode == '2':
             # Collect user input for prediction
