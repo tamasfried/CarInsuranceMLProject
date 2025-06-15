@@ -1,17 +1,16 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1750013021.64768 -1
-  "bibfile.bib" 1749912735.60388 1484 a0860df20b5f5100641f7a52dc439ae0 ""
-  "main.bcf" 1750013021.5577 108846 c4dcf602a65cc2a9659c9aeac2e569fc "pdflatex"
+["biber main"] 1750013917.59268 "main.bcf" "main.bbl" "main" 1750014418.19512 0
+  "bibfile.bib" 1750013892.49807 1671 44f7e0f7ebe9877241f225f2b945aa11 ""
+  "main.bcf" 1750014418.12008 108916 e51db8c6e84bd1ab2f6f91f79af1c0fb "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1750013020.359 "/Users/tommorton/Library/CloudStorage/OneDrive-Personal/Masters/Comp Sci/Modules/Artificial Intelligence/Assessment/Project/LaTex/main.tex" "main.pdf" "main" 1750013021.64799 0
-  "/Users/tommorton/Library/CloudStorage/OneDrive-Personal/Masters/Comp Sci/Modules/Artificial Intelligence/Assessment/Project/LaTex/main.tex" 1750013020.05612 13637 47959f43fdf71b1f1900ff2b15d880cf ""
+["pdflatex"] 1750014417.19333 "/Users/tommorton/Library/CloudStorage/OneDrive-Personal/Masters/Comp Sci/Modules/Artificial Intelligence/Assessment/Project/LaTex/main.tex" "main.pdf" "main" 1750014418.19543 0
+  "/Users/tommorton/Library/CloudStorage/OneDrive-Personal/Masters/Comp Sci/Modules/Artificial Intelligence/Assessment/Project/LaTex/main.tex" 1750014415.84474 14954 f91b039828d56ca79bd1ea252b85bb44 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm" 1136768653 1328 5442e22a7072966dbaf88ca900acf3f0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1136768653 1300 63a6111ee6274895728663cf4b4e7e81 ""
@@ -28,7 +27,6 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb" 1248133631 32298 c6d25bb16d1eac01ebdc6d7084126a1e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1248133631 32001 6aeea3afe875097b1eb0da29acd61e28 ""
@@ -88,10 +86,10 @@
   "boxplot.png" 1749908024 11411 4c6bf5e8bc0407c528df002f13c611b3 ""
   "heatmap.png" 1749908024 62889 7604d3f2f34d16756505d48418214aa8 ""
   "knn_regression.png" 1750011170.11736 64714 a9c0637c08cb9abcffddf4d7996c296f ""
-  "main.aux" 1750013021.55379 3570 89e9023635eca09d0d45370f21825f68 "pdflatex"
-  "main.bbl" 1750010509.80996 5067 7661bf5345bf2a2b5f2898faaaf223d8 "biber main"
-  "main.run.xml" 1750013021.55909 2302 011b86a1b438472b70357ab81593c14d "pdflatex"
-  "main.tex" 1750013020.05612 13637 47959f43fdf71b1f1900ff2b15d880cf ""
+  "main.aux" 1750014418.11731 3521 ad031871272865aa5b0537cf9620c06f "pdflatex"
+  "main.bbl" 1750013919.33119 6084 8e4da163af92c4858e3af1c0e0e44a9c "biber main"
+  "main.run.xml" 1750014418.12106 2302 011b86a1b438472b70357ab81593c14d "pdflatex"
+  "main.tex" 1750014415.84474 14954 f91b039828d56ca79bd1ea252b85bb44 ""
   "negative_price.png" 1750008553.64144 32127 9ac1f25c672a8a091a1ac4062a3e97f6 ""
   (generated)
   "main.aux"

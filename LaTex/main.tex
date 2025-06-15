@@ -41,8 +41,6 @@ Understanding the relationship between these factors is imperative to the resear
 
 The dataset was sources from Kaggle.com and provides an array of information including the details about a driver, their vehicle and the insurance premium they were quoted because of this\cite{Sriram_2025}. The dataset consists of 1000 rows of data containing numerical features along with the insurance price. Thee features include; Driver Age, Driver Experience, Previous Accidents, Annual Mileage (KM), Car Manufacturing Year, Car Age and finally, the target variable, Insurance Premium in US dollars.  
 
-To ensure the data was of a high enough quality, there was some initial exploratory analysis that took place in the form of normalisation, box plots and statistical summary. The initial check was to make sure where were no null values in the data, of which there are none as shown below in the output of an `isnull().sum()' check. SKlearn's standard scaler \cite{scikit_scaler} was used to normalise the data for the boxplots which makes it a lot easier to plot and pick out any outliers, of which there are none in this instance. Due to the nature of our data, all of the variables are integers or floats, this was confirmed by using 'df.dtypes' against the imported dataframe.
-
 \begin{verbatim}
 Driver Age                   0
 Driver Experience            0
@@ -54,11 +52,9 @@ Insurance Premium ($)        0
 dtype: int64
 \end{verbatim}
 
+To ensure the data was of a high enough quality, there was some initial exploratory analysis that took place in the form of normalisation, box plots and statistical summary. The initial check was to make sure where were no null values in the data, of which there are none as shown below in the output of an `isnull().sum()' check. SKlearn's standard scaler \cite{scikit_scaler} was used to normalise the data for the boxplots which makes it a lot easier to plot and pick out any outliers, of which there are none in this instance. Due to the nature of our data, all of the variables are integers or floats, this was confirmed by using 'df.dtypes' against the imported dataframe.
 
 
-
-
-\newpage
 \section{Exploratory Data Analysis (EDA)}
 
 \begin{figure}[h]
@@ -71,12 +67,18 @@ Using seaborn makes it simple to view a heatmap of the correlation between all o
 
 As expected, previous accidents seems to have a fairly strong positive correlation against insurance premiums. This implies that the more accidents that a driver has, the more at risk they are on the road. This again aligns with general risk assessment principles that drivers that have accidents more often, are more likely to have another accident in future. Other features in our dataset showed weaker and more negligable correlations, meaning that the correlation is not as strong and these have less of an effect on the price of car insurance. It would be interesting to see if other factors were added to this dataset, how much effect they would have. Such as engine size (cc), engine power (bhp), driveterrain layout (AWD, FWD, RWD), however those are not available for this dataset.
 
-\newpage
 \section{Modelling and Evaluation}
 
 Choosing a model to use for the application requires some testing of various models and evaluating the results. Some obvious choices are simple linear regression and multivariate regression. K-nearest neighbor regression is also useful for seperating data into different groups, however for predicting a continuous value such as insurance premiums, linear regression is the more appropirate. Dispite this, this section will cover all aforementioned to ensure no opportunities for appropirate models are missed.
 
 \subsection{Simple Linear Regression}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{age_insurance_LR.png}
+\caption{Regression Line: Driver Age vs Insurance Premium}\label{fig:regression_age}
+\end{figure}
+
 Linear regression models aim to establish a linear relationship between input features $x_i$ and the continuous target variable $y$ (insurance premium), typically expressed as:
 
 $$
@@ -87,11 +89,7 @@ where $\beta_0$ is the intercept and $\beta_i$ are the coefficients learned from
 
 
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\textwidth]{age_insurance_LR.png}
-\caption{Regression Line: Driver Age vs Insurance Premium}\label{fig:regression_age}
-\end{figure}
+
 In the above figure \ref{fig:regression_age}, the relationship between driver age and insurance premium is shown. Although the data is not perfectly linear, it does show a trend that as the driver age increases, the insurance premium decreases.This aligns with the negative correlation seen in the heatmap. The R2 score for this model was 57.19\% which indicates that 57\% of of the price variance in insurance premiums can be explained by the age of the driver. This is a fairly low score for a linear regressions model, however this is to be expected as it is commonly known that there are many factors that can affect the price of car insurance premiums.
 \subsection{Multivariate Regression}
 \begin{figure}[h]
@@ -138,32 +136,28 @@ K-Nearest neighbors (KNN) is a model that predicts the target variable based on 
     \end{minipage}
 \end{figure}
 
-The machine learning pipeline was implemented in Python 3.13.2 and Anaconda using very common python libraries including \texttt{pandas} for data manipulation in the way of creating dataframes and analysing the data, \texttt{scikit-learn} for modeling the data, and \texttt{matplotlib} and \texttt{seaborn} for visualizations such as graphs and charts.
+The machine learning pipeline was implemented on a Macbook Air with an Apple M2 chip which consists of an 8-core CPU, 8-core GPU and a 16-core Neural Engine which could be beneficial for training models \cite{appleMacbookAir}. The application was written in Python 3.13.2 and Anaconda using very common python libraries including \texttt{pandas} for data manipulation in the way of creating dataframes and analysing the data, \texttt{scikit-learn} for modeling the data, and \texttt{matplotlib} and \texttt{seaborn} for visualizations such as graphs and charts.
 
 The application created is an insurance price predictor that allows a user to input their details and retrieve a predicted insurance premium based on the data provided which matches the features in the dataset. Once the user has entered their details into the application, it will use the multivariate regression model that was chosen previously, to predict the insurance prices. The application will then produce a result that displays the predicted premium, but also the factors that were used to produce this result. I will display how much each facture contributed to the final price by using the coefficients from the multivariate regression model. 
 
-The application also uses the y-intercept of the model to provide a base price of the insurance premiums of \$500. This seems to be common practice in the insurance industry to have a base price for insurance premiums. This base price was testing by entering all user details as 0 (setting car year to 2025) and the model returned a price of \$500. As a result of this, validation checks were implemented to ensure that the user does not enter any values that would not make sense in the context of purchasing insurance. For example, a driver cannot be younger that 17 years old, and the experience cannot be more than the driver age minus 17, this is because it was based on the minimum driving age in the UK, which is 17 years old. The application also checks that the annual mileage and the car age is not negative, otherwise this has a drastic effect on the insurance premiums, which can be see on the figures \ref{fig:negative_mileage} \ref{fig:base_price}.
+The application also uses the y-intercept of the model to provide a base price of the insurance premiums of \$500. This seems to be common practice in the insurance industry to have a base price for insurance premiums. 
+\begin{verbatim}
+        # Show base premium (intercept)
+        base_premium = model.intercept_
+        print(f"Base Premium: ${base_premium:.2f}")
+\end{verbatim}
+This base price was testing by entering all user details as 0 (setting car year to 2025) and the model returned a price of \$500. As a result of this, validation checks were implemented to ensure that the user does not enter any values that would not make sense in the context of purchasing insurance. For example, a driver cannot be younger that 17 years old, and the experience cannot be more than the driver age minus 17, this is because it was based on the minimum driving age in the UK, which is 17 years old. The application also checks that the annual mileage and the car age is not negative, otherwise this has a drastic effect on the insurance premiums, which can be see on the figures \ref{fig:negative_mileage} \ref{fig:base_price}. 
 
 
-\newpage
-\section{Results Analysis}
+As well as the function to predict the insurance premiums, the application also has a function to display the data analysis including the MSE and R squared score of the model, as well as the coefficients of each feature in the model. Although previously noted that the R2 is perfect due to the small dataset or the synthetic nature of the data. 
 
-\newpage
-\section{Ethical Considerations}
+\section{Results Analysis \& Report}
 
-The use of machine learning for predicting car insurance premiums introduces several ethical concerns:
+The simple linear regression model was reasonably accurate in predicting the insurance premiums based on driver age alone, however the limited power of this model means it wasn't appropriate for this use. 
 
-\textbf{Fairness and Bias:} 
+The multivariate linear regression model was a perfect fit for the data with it's R2 sore of 1.0. However, as discussed previously, this may be due to the small size of the dataset, and also the potentially synthetic nature of the dataset selected from Kaggle.com. Either way, it it still a useful model and fits the application well.
 
-\textbf{Data Privacy:} 
-
-\textbf{Transparency:} 
-
-\textbf{Accountability:} 
-
-\newpage
-\section{Conclusion}
-
+Should this project be extended or repeated, it would be interesting to see how this Multivariate model would perform should it be trained on a larger dataset, or more importantly, a dataset that is not synthetic. This would allow for a more generalised model that could be deployed to the real world and potentially used in the car insurance industry.
 \newpage
 
 \printbibliography
