@@ -145,6 +145,46 @@
       \verb https://www.kaggle.com/datasets/govindaramsriram/car-insurance-premium-dataset
       \endverb
     \endentry
+    \entry{WANG2020582}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=95e672aff4c04778adaaa9eec5686fdc}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hui\bibnamedelima Dong},
+           giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{95e672aff4c04778adaaa9eec5686fdc}
+      \strng{fullhash}{95e672aff4c04778adaaa9eec5686fdc}
+      \strng{fullhashraw}{95e672aff4c04778adaaa9eec5686fdc}
+      \strng{bibnamehash}{95e672aff4c04778adaaa9eec5686fdc}
+      \strng{authorbibnamehash}{95e672aff4c04778adaaa9eec5686fdc}
+      \strng{authornamehash}{95e672aff4c04778adaaa9eec5686fdc}
+      \strng{authorfullhash}{95e672aff4c04778adaaa9eec5686fdc}
+      \strng{authorfullhashraw}{95e672aff4c04778adaaa9eec5686fdc}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the continuous development of machine learning, enterprises using machine learning methods to mine potential data information has become a hot topic in the research of major insurance companies. In this paper, the features of auto insurance data are analyzed, and the most important features affecting auto renewal are mined. The random forest (RF), gradient lifting tree (GBDT) and lifting machine algorithm (LightGBM) are compared. The test results show that: LightGBM model with the best superiority and robustness. Features of car insurance business channel, NCD, car age and new car purchase price have a greater impact on whether to renew insurance or not.}
+      \field{issn}{1877-0509}
+      \field{journaltitle}{Procedia Computer Science}
+      \field{note}{Proceedings of the 3rd International Conference on Mechatronics and Intelligent Robotics (ICMIR-2019)}
+      \field{title}{Research on the Features of Car Insurance Data Based on Machine Learning}
+      \field{volume}{166}
+      \field{year}{2020}
+      \field{pages}{582\bibrangedash 587}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.procs.2020.02.016
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1877050920301381
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1877050920301381
+      \endverb
+      \keyw{Car insurance,Feature engineering,LightGBM,Data analysis}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

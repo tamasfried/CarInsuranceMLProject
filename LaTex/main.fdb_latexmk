@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1750013917.59268 "main.bcf" "main.bbl" "main" 1750014418.19512 0
-  "bibfile.bib" 1750013892.49807 1671 44f7e0f7ebe9877241f225f2b945aa11 ""
-  "main.bcf" 1750014418.12008 108916 e51db8c6e84bd1ab2f6f91f79af1c0fb "pdflatex"
+["biber main"] 1750014674.70405 "main.bcf" "main.bbl" "main" 1750014914.99019 0
+  "bibfile.bib" 1750014655.24849 2912 c60358caea1b55ac5a51be70be62cecf ""
+  "main.bcf" 1750014914.91449 108982 08cc664b50f947f76c375ff040f5efb3 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1750014417.19333 "/Users/tommorton/Library/CloudStorage/OneDrive-Personal/Masters/Comp Sci/Modules/Artificial Intelligence/Assessment/Project/LaTex/main.tex" "main.pdf" "main" 1750014418.19543 0
-  "/Users/tommorton/Library/CloudStorage/OneDrive-Personal/Masters/Comp Sci/Modules/Artificial Intelligence/Assessment/Project/LaTex/main.tex" 1750014415.84474 14954 f91b039828d56ca79bd1ea252b85bb44 ""
+["pdflatex"] 1750014913.87275 "/Users/tommorton/Library/CloudStorage/OneDrive-Personal/Masters/Comp Sci/Modules/Artificial Intelligence/Assessment/Project/LaTex/main.tex" "main.pdf" "main" 1750014914.99048 0
+  "/Users/tommorton/Library/CloudStorage/OneDrive-Personal/Masters/Comp Sci/Modules/Artificial Intelligence/Assessment/Project/LaTex/main.tex" 1750014913.64283 15345 cb517639129412d4d6cf2fcecce78ca4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -86,10 +86,10 @@
   "boxplot.png" 1749908024 11411 4c6bf5e8bc0407c528df002f13c611b3 ""
   "heatmap.png" 1749908024 62889 7604d3f2f34d16756505d48418214aa8 ""
   "knn_regression.png" 1750011170.11736 64714 a9c0637c08cb9abcffddf4d7996c296f ""
-  "main.aux" 1750014418.11731 3521 ad031871272865aa5b0537cf9620c06f "pdflatex"
-  "main.bbl" 1750013919.33119 6084 8e4da163af92c4858e3af1c0e0e44a9c "biber main"
-  "main.run.xml" 1750014418.12106 2302 011b86a1b438472b70357ab81593c14d "pdflatex"
-  "main.tex" 1750014415.84474 14954 f91b039828d56ca79bd1ea252b85bb44 ""
+  "main.aux" 1750014914.91164 3661 ade2dc2e7843758c61a964a70dca8169 "pdflatex"
+  "main.bbl" 1750014677.11298 8544 03ea7ba6341c7cb793edee60ed94baa6 "biber main"
+  "main.run.xml" 1750014914.91541 2302 011b86a1b438472b70357ab81593c14d "pdflatex"
+  "main.tex" 1750014913.64283 15345 cb517639129412d4d6cf2fcecce78ca4 ""
   "negative_price.png" 1750008553.64144 32127 9ac1f25c672a8a091a1ac4062a3e97f6 ""
   (generated)
   "main.aux"
