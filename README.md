@@ -12,21 +12,18 @@ This project investigates how driver and vehicle attributes can be used to estim
    pip install -r requirements.txt
    ```
    The bundled requirements file captures the full environment used during development. For a minimal setup install `pandas numpy scikit-learn matplotlib seaborn xgboost`.
-3. Launch the interactive predictor:
-   ```bash
-   python Insurance_Price_Predictor.py
-   ```
+3. Launch the interactive predictor (run from the project root):
+  ```bash
+  python scripts/Insurance_Price_Predictor.py
+  ```
 
 ## Repository Structure
 
-- `car_insurance.csv` – Kaggle dataset with 1,000 driver/vehicle records and premium labels.
-- `Insurance_Price_Predictor.py` – CLI menu to inspect model metrics or predict a premium for new inputs with validation and feature contribution breakdowns.
-- `car_insurance.ipynb` – Exploratory data analysis (data quality, distributions, correlations, regression fits).
-- `insurance_analysis_MLR.ipynb` – Detailed multivariate linear regression workflow and diagnostics.
-- `Clustering_Car_Insurance.ipynb` – Feature scaling and K-Means experiments to discover risk archetypes.
-- `MLPRegressor_Car_Insurance.ipynb` & `XGBoost_Car_Insurance.ipynb` – Non-linear model experiments (neural network and gradient boosting).
-- `actual_vs_predicted.png`, `correlation_matrix.png`, `residual_plot.png` – Key diagnostic visualisations exported from the notebooks.
-- `LaTex/` & `PDF/` – Formal project report source and compiled submission.
+- `data/car_insurance.csv` – Kaggle dataset with 1,000 driver/vehicle records and premium labels.
+- `scripts/Insurance_Price_Predictor.py` – CLI menu to inspect model metrics or predict a premium for new inputs with validation and feature contribution breakdowns.
+- `notebooks/` – Jupyter notebooks (`car_insurance.ipynb`, `insurance_analysis_MLR.ipynb`, `Clustering_Car_Insurance.ipynb`, `MLPRegressor_Car_Insurance.ipynb`, `XGBoost_Car_Insurance.ipynb`, `Testing.ipynb`).
+- `figures/` – Exported static visualisations (e.g., `actual_vs_predicted.png`, `correlation_matrix.png`, `residual_plot.png`).
+- `reports/latex/` & `reports/pdf/` – Formal project report source and compiled submission.
 
 ## Dataset
 
@@ -35,7 +32,7 @@ This project investigates how driver and vehicle attributes can be used to estim
 - **Features:**
   - `Driver Age`, `Driver Experience`, `Previous Accidents`, `Annual Mileage (x1000 km)`, `Car Manufacturing Year`, `Car Age`.
   - Target: `Insurance Premium ($)`.
-- The data contains no missing values and appears to be synthetic, which explains the near-perfect fit achieved by simple models. Feature scaling (StandardScaler) was applied before distance-based or neural models.
+- Stored at `data/car_insurance.csv`. The data contains no missing values and appears to be synthetic, which explains the near-perfect fit achieved by simple models. Feature scaling (StandardScaler) was applied before distance-based or neural models.
 
 ## Exploratory Analysis Highlights
 
@@ -76,13 +73,13 @@ Launch JupyterLab or Notebook after installing dependencies:
 jupyter lab
 ```
 
-Each notebook is self-contained and can be rerun top-to-bottom. For repeatability, ensure the virtual environment uses Python 3.10+ and install the libraries listed above.
+Each notebook in `notebooks/` is self-contained and can be rerun top-to-bottom. For repeatability, ensure the virtual environment uses Python 3.10+ and install the libraries listed above.
 
 ## Reports and Deliverables
 
-- `LaTex/main.tex` contains the full written report with methodology, results discussion, and references.
-- `PDF/HCS502_Assessment_AI_ML_project_2310190.pdf` is the compiled submission.
-- Supporting graphics (e.g., `actual_vs_predicted.png`, `residual_plot.png`) are available for integration into presentations or documentation.
+- `reports/latex/main.tex` contains the full written report with methodology, results discussion, and references.
+- `reports/pdf/HCS502_Assessment_AI_ML_project_2310190.pdf` is the compiled submission.
+- Supporting graphics (e.g., `figures/actual_vs_predicted.png`, `figures/residual_plot.png`) are available for integration into presentations or documentation.
 
 ## Limitations and Next Steps
 

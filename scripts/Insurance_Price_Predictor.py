@@ -3,12 +3,16 @@
 # or manually: pip install pandas, numpy, scikit-learn, matplotlib
 
 # Import necessary libraries
+from pathlib import Path
+
 import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
-import matplotlib.pyplot as plt
+
+# Resolve dataset path so the script works when called from any directory
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "data" / "car_insurance.csv"
 
 def prompt_user_for_features():
     # Function to collect driver and vehicle information from user input
@@ -96,7 +100,7 @@ if __name__ == "__main__":
             break
 
         # Load and prepare the dataset
-        df = pd.read_csv('car_insurance.csv')
+        df = pd.read_csv(DATA_PATH)
 
         # Separate features (X) and target variable (y)
         X = df.drop(['Insurance Premium ($)', 'Car Manufacturing Year'], axis=1) # Drop Insurance Premium and Car Manufacturing Year for training as car age is already defined.
